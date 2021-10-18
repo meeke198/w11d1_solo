@@ -17,6 +17,8 @@
   <link rel="stylesheet" href="css/10-posts.css" type="text/css">
   <link rel="stylesheet" href="css/11-icons.css" type="text/css">
   <link rel="stylesheet" href="css/12-modal.css" type="text/css">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script></script>
 </head>
 <body>
 
@@ -215,6 +217,38 @@
       </div>
 
     </section>
+    <div class="modal">
+      <div class="modal-screen"></div>
+
+      <div class="modal-form">
+       <h2>Welcome</h1>
+        <p>Please sign in to continue</p>
+        <label for="input-email">Email
+          <input type="text" id="input-email" name="input-email">
+        </label>
+        <label for="input-password">Password
+          <input type="password" id="input-password" name="input-password">
+        </label>
+        <button type="submit" class=".js-modal-open" >Sign in</button><span>or </span><button type="submit" class=".js-modal-close">Cancel</button>
+        <button aria-label="Close Account Info Modal Box">&times;</button>
+      </div>
+    </div>
+    
+    <script>
+      $(function () {
+
+        $("body").on("click", ".js-modal-open", function (event) {
+          event.preventDefault();
+          $(".modal").addClass("is-open");
+        });
+
+        $("body").on("click", ".js-modal-close", function (event) {
+          event.preventDefault();
+          $(".modal").removeClass("is-open");
+        });
+
+      });
+    </script>
   </main>
 
   <footer class="footer">

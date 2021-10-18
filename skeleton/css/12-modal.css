@@ -1,1 +1,22 @@
 /* PHASE 12: Modal */
+.modal-screen{
+    top: 0px; /*fixed position, set all to 0 to stretch it out to fill the entire screen*/
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    z-index: 2; /*have it sit in front of everything else on the page*/
+    background: rgba(0, 0, 0, 0.8); /*The 0.8 alpha will make it slightly see-through.*/
+    height: 100%;
+    width: 100%;
+}
+
+.modal-form{
+    position: absolute;
+    height: 400px;
+    width: 300px;
+}
+.modal{
+    position: relative;
+    align-items: center;
+    justify-content: center;
+}
